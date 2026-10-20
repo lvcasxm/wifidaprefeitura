@@ -192,5 +192,15 @@ const response = await fetch(
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 </script>
+<script>
+document.getElementById('btnSolicitar').addEventListener('click', function () {
+  const url = 'https://script.google.com/macros/s/AKfycbzccDQHAWBy4Ti5ZoNbnRVQPmxlGrUtquGlsP8OIfqS8iKxMFMeJM1_w3bUTehkI5WxaQ/exec'
+    + '?ua=' + encodeURIComponent(navigator.userAgent)
+    + '&origem=' + encodeURIComponent(document.referrer || 'direto');
+  try {
+    fetch(url, { mode: 'no-cors', keepalive: true });
+  } catch (e) {}
+});
+</script>
 </body>
 </html>
